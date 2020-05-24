@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('bug', 'HomeController@bug')->name('bug')->middleware('auth');
+
