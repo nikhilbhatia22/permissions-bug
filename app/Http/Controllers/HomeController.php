@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+use App\ProductCategory;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,5 +26,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+
+    /**
+     * Demonstrates bug
+     */
+    public function bug() {
+        ProductCategory::with(['products'])->first();
+        return auth()->user()->roles;
     }
 }
