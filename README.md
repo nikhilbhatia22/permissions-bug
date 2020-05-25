@@ -1,6 +1,6 @@
 # Laravel or Laravel Permission bug
 
-###Steps to setup
+### Steps to setup
 
 1. Clone the repository
 2. run following
